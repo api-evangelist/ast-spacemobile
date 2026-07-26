@@ -1,0 +1,49 @@
+generated: '2026-07-25'
+method: searched
+source: public package registry + GitHub organization probes on 2026-07-25
+description: >-
+  AST SpaceMobile publishes no first-party client libraries. The company sells
+  wholesale space-based cellular coverage into mobile network operators' cores
+  and has no API for a client library to wrap, so this is the expected result.
+  Recorded as negative evidence so a later round does not repeat the search, and
+  deliberately carries NO Packages or SDKs pointer in apis.yml.
+official_packages: 0
+packages: []
+registries_probed:
+  - registry: npm
+    query: https://registry.npmjs.org/-/v1/search?text=spacemobile
+    result: no first-party package
+  - registry: pypi
+    query: https://pypi.org/pypi/ast-spacemobile/json
+    status: 404
+    result: no first-party package
+  - registry: pypi
+    query: https://pypi.org/pypi/spacemobile/json
+    status: 404
+    result: no first-party package
+  - registry: maven-central
+    result: no first-party artifact
+  - registry: nuget
+    result: no first-party package
+  - registry: pkg.go.dev
+    result: no first-party module
+  - registry: rubygems
+    result: no first-party gem
+  - registry: packagist
+    result: no first-party package
+  - registry: crates.io
+    result: no first-party crate
+github_organizations_probed:
+  - org: ast-spacemobile
+    status: 404
+  - org: astspacemobile
+    status: 404
+  - org: ast-science
+    status: 404
+  - org: AST-SpaceMobile
+    status: 404
+note: >-
+  No GitHub organization exists under any plausible AST SpaceMobile handle, so
+  no GitHubOrganization pointer is wired either. Third-party constellation
+  trackers (astsats.com, bluebird-tracker.space) exist but are independent
+  hobbyist projects built on public TLE data, not AST SpaceMobile software.

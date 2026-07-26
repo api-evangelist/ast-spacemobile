@@ -43,10 +43,18 @@ modified: '2026-07-25'
 specificationVersion: '0.19'
 apis: []
 common:
+- type: DomainSecurity
+  url: security/ast-spacemobile-domain-security.yml
+- type: LLMsTxt
+  url: llms/ast-spacemobile-llms.txt
 - type: Website
   url: https://ast-science.com/
 - type: About
   url: https://ast-science.com/company/
+- type: Team
+  url: https://ast-science.com/company/our-team/
+- type: Careers
+  url: https://ast-science.com/company/careers/
 - type: Blog
   url: https://ast-science.com/blog/
 - type: BlogRSS
@@ -63,8 +71,18 @@ common:
   url: https://investors.ast-science.com/
 - type: SECFilings
   url: https://investors.ast-science.com/sec-filings
+- type: Events
+  url: https://investors.ast-science.com/events
+- type: Resources
+  url: https://ast-science.com/resources/
+- type: Images
+  url: https://ast-science.com/resources/images/
+- type: Videos
+  url: https://ast-science.com/resources/videos/
 - type: BrandResources
   url: https://ast-science.com/resources/brand-resources/
+- type: Sitemap
+  url: https://ast-science.com/sitemap_index.xml
 - type: PrivacyPolicy
   url: https://ast-science.com/privacy-policy/
 - type: TermsOfService
