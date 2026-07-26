@@ -1,0 +1,239 @@
+aid: ast-spacemobile
+name: AST SpaceMobile
+review:
+  question: Does AST SpaceMobile publish a public developer portal, downloadable API
+    specifications, or any CAMARA / GSMA Open Gateway network-API surface?
+  answer: false
+  date: '2026-07-25'
+  reviewer: API Evangelist
+  homeMarket: United States
+  tier: satellite-ntn
+  gated: true
+  portalConfirmed: false
+  openapiHarvested: false
+  specsCount: 0
+findings:
+  summary: |
+    AST SpaceMobile publishes no developer surface of any kind. It is a
+    satellite infrastructure company that sells wholesale space-based cellular
+    coverage into mobile network operators' cores; the operator, not AST, owns
+    the subscriber, the billing relationship and whatever network APIs exist.
+    Every first-party developer host and path probed on 2026-07-25 either
+    failed to resolve or returned 404. There is no API documentation, no
+    OpenAPI or Swagger, no SDK, no Postman workspace, no GraphQL, no webhook
+    catalog, no status page, no .well-known metadata, and no GitHub
+    organization. The word "API" does not appear on ast-science.com's
+    marketing, partner, network, how-it-works, FAQ or press-release pages.
+    This is the expected and correct finding for a non-terrestrial-network
+    operator at this stage: AST's product is radio coverage handed off at a
+    ground gateway into a partner carrier's network, and the only programmable
+    reach a developer has to SpaceMobile capacity is through that carrier.
+  developerPortal:
+    url: ''
+    confirmed: false
+    verdict: none
+    note: No developer portal exists — not a self-serve portal, not a partner login
+      wall, not even a marketing landing page for developers.
+  probes:
+  - url: https://ast-science.com/
+    status: 200
+    note: Corporate marketing site (WordPress). No developer or API section in the
+      global navigation.
+  - url: https://developer.ast-science.com/
+    status: 0
+    note: DNS does not resolve.
+  - url: https://developers.ast-science.com/
+    status: 0
+    note: DNS does not resolve.
+  - url: https://docs.ast-science.com/
+    status: 0
+    note: DNS does not resolve.
+  - url: https://api.ast-science.com/
+    status: 0
+    note: DNS does not resolve.
+  - url: https://opengateway.ast-science.com/
+    status: 0
+    note: DNS does not resolve. Probed because Telefonica and other carriers use this
+      exact Open Gateway subdomain pattern.
+  - url: https://ast-science.com/developer
+    status: 404
+  - url: https://ast-science.com/developers
+    status: 404
+  - url: https://ast-science.com/api
+    status: 404
+  - url: https://ast-science.com/opengateway
+    status: 404
+  - url: https://ast-science.com/openapi.json
+    status: 404
+  - url: https://ast-science.com/swagger.json
+    status: 404
+  - url: https://ast-science.com/api-docs
+    status: 404
+  - url: https://ast-science.com/.well-known/openid-configuration
+    status: 404
+    note: No OIDC discovery document served, so no evidence of an OIDC or CIBA
+      authorization surface.
+  - url: https://ast-science.com/.well-known/security.txt
+    status: 404
+  - url: https://ast-science.com/robots.txt
+    status: 404
+  - url: https://ast-science.com/sitemap.xml
+    status: 200
+    note: Yoast sitemap index. The full page sitemap enumerates 29 pages; none is a
+      developer, API, documentation or partner-integration page.
+  subdomainScan:
+    method: DNS A-record lookup on 2026-07-25
+    hosts:
+    - portal
+    - partner
+    - partners
+    - my
+    - status
+    - support
+    - help
+    - console
+    - cloud
+    - gateway
+    - nef
+    - sandbox
+    - dev
+    - test
+    - app
+    result: none resolved
+  openapi:
+    harvested: false
+    count: 0
+    note: No OpenAPI, Swagger, AsyncAPI, JSON Schema or .proto artifact is published
+      anywhere on the domain. The openapi/ directory is deliberately absent.
+  camara:
+    posture: no CAMARA reference found — not a member, not named, nothing callable
+    apis: []
+    evidence: |
+      Full-text scan of ast-science.com's home, partners, spacemobile-network,
+      how-it-works, how-you-connect, mission, company and FAQ pages plus the
+      press-releases index on 2026-07-25 returned zero occurrences of "CAMARA",
+      "Open Gateway", "API", "SDK", "developer" or "TM Forum". No CAMARA API —
+      Number Verification, SIM Swap, Device Location, Device Status, Quality on
+      Demand, Carrier Billing, KYC Match, Scam Signal, Device Swap, Population
+      Density — is claimed, documented or exposed. There is not even a press
+      release to discount here: AST has made no CAMARA claim at all.
+    openGatewayMember: false
+    openGatewayNote: |
+      No evidence found that AST SpaceMobile is a GSMA Open Gateway participant.
+      Open Gateway is an operator commitment layer signed by MNOs that own
+      subscribers; AST is a wholesale coverage supplier to those MNOs and holds
+      no retail subscriber base of its own. Its carrier partners (AT&T, Verizon,
+      Vodafone, Rakuten, Bell, TELUS, stc) are the Open Gateway signatories,
+      which is a partner fact, not an AST fact.
+    adunaChannel: false
+    adunaNote: No relationship with Aduna, the Ericsson/carrier network-API joint
+      venture, is claimed or evidenced.
+  tmForum:
+    conformance: none found
+    note: No TM Forum Open API conformance certification (TMF620, TMF622, TMF641 or
+      any other) is claimed on the site. AST publishes no BSS/OSS interface.
+  threegpp:
+    nef: false
+    scef: false
+    networkSlicing: false
+    edgeMec: false
+    note: |
+      AST's architecture is described in radio and transport terms only — phased
+      array satellites, in-country ground gateways that compensate for Doppler
+      and delay, and handoff of the signal into the partner operator's network.
+      No Network Exposure Function, SCEF, network-slicing or edge/MEC API
+      surface is described or exposed. Any NEF in this value chain belongs to
+      the terminating carrier.
+  auth:
+    model: none — no authenticated API surface exists
+    ciba: false
+    cibaNote: CAMARA specifies OIDC and CIBA for network-based authorization; neither
+      appears anywhere in AST SpaceMobile's public surface.
+  webhooks:
+    published: false
+    asyncapi: false
+    note: No event catalog, callback documentation or AsyncAPI document is published.
+  sdks:
+    published: false
+    githubOrganization: none
+    note: 'GitHub organization probes returned 404 for ast-spacemobile, ast-science
+      and astspacemobile. No first-party packages found on npm, PyPI, Maven or NuGet.'
+  postman:
+    workspace: none found
+  graphql:
+    endpoint: none found
+  incidentalSurfaces:
+  - url: https://ast-science.com/wp-json/
+    status: 200
+    contentType: application/json
+    note: |
+      The corporate site runs WordPress and its core REST API index responds
+      anonymously. This is generic CMS plumbing for the marketing site, not an
+      AST SpaceMobile product API, and is deliberately NOT listed in apis[].
+      Recorded here only so the finding is reproducible and so a future reviewer
+      does not mistake it for a product surface.
+  - url: https://investors.ast-science.com/
+    status: 200
+    note: Third-party-hosted investor relations site. No API surface of AST's own.
+  transports:
+  - protocol: REST
+    documented: false
+    note: No documented REST API.
+  - protocol: GraphQL
+    documented: false
+  - protocol: gRPC
+    documented: false
+  - protocol: WebSocket
+    documented: false
+  - protocol: Webhooks
+    documented: false
+  channelToDevelopers: |
+    Indirect only. Developers cannot buy, provision or call anything from AST
+    SpaceMobile. SpaceMobile coverage reaches end users as a Day Pass, monthly
+    add-on or standalone plan sold by a partner mobile network operator, and any
+    programmable interface a developer touches — messaging, location,
+    verification, connectivity — belongs to that operator, not to AST.
+sources:
+- url: https://ast-science.com/
+  type: Website
+  note: Home page; global navigation has no developer or API entry.
+- url: https://ast-science.com/partners/
+  type: Documentation
+  note: Names AT&T, Rakuten, stc, Verizon, Google, Bell, Vodafone, American Tower and
+    TELUS, and states AST has joined forces with nearly 60 mobile network operators
+    serving over 3 billion subscribers. Describes integration in network terms only,
+    with no API, CAMARA or Open Gateway reference.
+- url: https://ast-science.com/how-it-works/
+  type: Documentation
+  note: 'Four-step architecture: phone to satellite, satellite to ground gateway,
+    gateway Doppler/delay compensation, gateway routes the signal into the mobile
+    operator''s network. Confirms the operator, not AST, terminates and bills.'
+- url: https://ast-science.com/spacemobile-network/
+  type: Documentation
+  note: Constellation and spectrum detail — BlueWalker 3 prototype, BlueBird 1-5
+    launched 2024-09-12, Next-Gen BlueBirds with ~2,400 sq ft arrays. No software or
+    API surface described.
+- url: https://ast-science.com/how-you-connect/
+  type: Documentation
+  note: 'Retail packaging is entirely operator-sold: Day Pass, monthly add-on, or
+    standalone plan. Confirms AST has no direct customer or developer channel.'
+- url: https://ast-science.com/faqs/
+  type: Documentation
+  note: 'States access requires only an existing smartphone with "no special devices,
+    software updates, or apps" — an explicit statement that there is no client-side
+    software surface.'
+- url: https://ast-science.com/press-releases/
+  type: PressReleases
+  note: Zero occurrences of CAMARA, Open Gateway, API, SDK, developer or TM Forum.
+- url: https://ast-science.com/sitemap.xml
+  type: Sitemap
+  note: Complete page inventory used to rule out an unlinked developer section.
+actions:
+  apisYmlCreated: true
+  apisListed: 0
+  openapiDirectoryCreated: false
+  reason: |
+    apis[] is intentionally empty. AST SpaceMobile has no real, documented,
+    public API, and listing the WordPress wp-json CMS index or a partner
+    carrier's network APIs would misrepresent what this company publishes.
+    Recorded as built-stub: honest identity, honest absence.
