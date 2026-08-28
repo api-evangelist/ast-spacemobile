@@ -26,6 +26,17 @@ description: >-
   releases. Any programmable access to SpaceMobile capacity reaches developers
   only indirectly, through the partner carrier that owns the subscriber
   relationship and the network APIs.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://ast-science.com/wp-content/uploads/2025/08/cropped-Rectangle-491-6-192x192.png
 tags:
 - Telecommunications
