@@ -1,4 +1,4 @@
-# AST SpaceMobile (ast-spacemobile)
+# AST SpaceMobile
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,59 +64,82 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-AST SpaceMobile (NASDAQ: ASTS) is a United States satellite operator building the SpaceMobile Network, a space-based cellular broadband constellation of BlueBird satellites carrying the largest commercial phased-array antennas in low Earth orbit, designed to deliver 4G and 5G directly to standard, unmodified smartphones. It sits upstream of the retail telecom market as a wholesale coverage layer — signals from a handset are relayed by satellite to a small number of in-country ground gateways, which compensate for Doppler and delay and then hand the traffic into a mobile network operator's core, where the operator completes the call and bills the subscriber. Distribution runs entirely through partner carriers, with agreements covering nearly 60 mobile network operators serving over 3 billion subscribers, including AT&T, Verizon, Vodafone, Rakuten, Bell, TELUS and stc, plus strategic investment from Google and American Tower.
+AST SpaceMobile (NASDAQ, ASTS) is a United States satellite operator building the SpaceMobile Network, a space-based cellular broadband constellation of BlueBird satellites carrying the largest commercial phased-array antennas in low Earth orbit, designed to deliver 4G and 5G directly to standard, unmodified smartphones. It sits upstream of the retail telecom market as a wholesale coverage layer, not a consumer brand, not a CPaaS: signals from a handset are relayed by satellite to a small number of in-country ground gateways, which compensate for Doppler and delay and then hand the traffic into a mobile network operator's core, where the operator completes the call and bills the subscriber. Distribution runs entirely through partner carriers, with agreements covering nearly 60 mobile network operators serving over 3 billion subscribers, including AT&T, Verizon, Vodafone, Rakuten, Bell, TELUS and stc, plus strategic investment from Google and American Tower. Its API posture is that of a satellite infrastructure company rather than a network-API publisher, honestly assessed as none: as of July 2026 AST SpaceMobile publishes no developer portal, no API documentation, no OpenAPI, no SDKs and no public network-API surface. Probes of developer, developers, docs, api and opengateway subdomains and the corresponding site paths all fail to resolve or return 404, and no CAMARA, GSMA Open Gateway, TM Forum or 3GPP NEF exposure claim appears anywhere on ast-science.com or in its press releases. Any programmable access to SpaceMobile capacity reaches developers only indirectly, through the partner carrier that owns the subscriber relationship and the network APIs.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/ast-spacemobile/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/ast-spacemobile/refs/heads/main/apis.yml)
+**Areas:** Telecommunications · United States · Satellite · Direct-to-Device · Non-Terrestrial Network · Mobile Network Operator · Broadband · 5G · Roaming · Space
 
-## Tags
+## AST SpaceMobile on APIs.io
 
-- Telecommunications
-- United States
-- Satellite
-- Direct-to-Device
-- Non-Terrestrial Network
-- Mobile Network Operator
-- Broadband
-- 5G
-- Roaming
-- Space
+Everything profiled for AST SpaceMobile is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/ast-spacemobile/](https://apis.io/providers/ast-spacemobile/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-07-25
-- **Modified:** 2026-07-25
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Security (1)
 
-None. As of the July 25, 2026 review, AST SpaceMobile publishes no public API.
+Authentication, trust centre, and vulnerability disclosure.
 
-This is the honest finding, and for a non-terrestrial-network operator at this stage it is the expected one. Every first-party developer host and path probed either failed to resolve or returned 404: `developer.ast-science.com`, `developers.ast-science.com`, `docs.ast-science.com`, `api.ast-science.com` and `opengateway.ast-science.com` have no DNS records, and `/developer`, `/developers`, `/api`, `/opengateway`, `/openapi.json`, `/swagger.json` and `/api-docs` all return 404. There is no API documentation, no OpenAPI or Swagger, no SDK, no GitHub organization, no Postman workspace, no GraphQL endpoint, no webhook catalog and no `.well-known` metadata. The `openapi/` directory is deliberately absent because nothing real was found to put in it.
+- [Ast Spacemobile Domain Security](https://apis.io/security/ast-spacemobile/ast-spacemobile-domain-security/)
 
-### CAMARA and GSMA Open Gateway posture
+## Where to find this API
 
-**No CAMARA reference found — not a member, not named, nothing callable.** A full-text scan of the home, partners, network, how-it-works, how-you-connect, mission, company and FAQ pages plus the press-release index returned zero occurrences of "CAMARA", "Open Gateway", "API", "SDK", "developer" or "TM Forum". Not one CAMARA API — Number Verification, SIM Swap, Device Location, Device Status, Quality on Demand, Carrier Billing, KYC Match, Scam Signal, Device Swap, Population Density — is claimed, documented or exposed. There is not even a press release to discount here; AST has made no CAMARA claim at all.
-
-AST is not a GSMA Open Gateway participant. Open Gateway is an operator commitment layer signed by carriers that own subscribers; AST is a wholesale coverage supplier to those carriers and holds no retail subscriber base of its own. Its partners — AT&T, Verizon, Vodafone, Rakuten, Bell, TELUS, stc — are the Open Gateway signatories, which is a partner fact, not an AST fact. No Aduna channel relationship is claimed either.
-
-No TM Forum Open API conformance certification is claimed. No 3GPP NEF or SCEF surface, network slicing API or edge/MEC API is described — AST's architecture is documented purely in radio and transport terms, and any Network Exposure Function in this value chain belongs to the terminating carrier.
-
-### How developers actually reach SpaceMobile
-
-Indirectly, through someone else. Developers cannot buy, provision or call anything from AST SpaceMobile. SpaceMobile coverage reaches end users as a Day Pass, a monthly add-on, or a standalone plan sold by a partner mobile network operator, and any programmable interface a developer touches — messaging, location, verification, connectivity — belongs to that operator.
-
-## Links
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://ast-science.com/)
-- [Company](https://ast-science.com/company/)
-- [Partners](https://ast-science.com/partners/)
-- [SpaceMobile Network](https://ast-science.com/spacemobile-network/)
-- [How It Works](https://ast-science.com/how-it-works/)
-- [FAQs](https://ast-science.com/faqs/)
 - [Blog](https://ast-science.com/blog/)
-- [Press Releases](https://ast-science.com/press-releases/)
-- [Investor Relations](https://investors.ast-science.com/)
-- [LinkedIn](https://www.linkedin.com/company/ast-science/)
+- [Terms of service](https://ast-science.com/terms-of-service/)
+- [Privacy policy](https://ast-science.com/privacy-policy/)
 
-## Review
+## API Evangelist rating
 
-See [review.yml](review.yml) for the full reviewer findings, including every probe URL with its HTTP status.
+**Kin Score 9.0** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 56.3 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 2.4 |
+| Access clarity | 21.1 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.7** — Telecommunications
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/ast-spacemobile/](https://apis.io/providers/ast-spacemobile/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for AST SpaceMobile: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/ast-spacemobile/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
